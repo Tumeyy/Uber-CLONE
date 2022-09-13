@@ -11,11 +11,11 @@ const MapScreen = () => {
     const Stack = createStackNavigator();
     return (
         <View>
-          <View style={tw`h-1/2`}>
+          <View style={tw`h-1/4`}>
             <Map />
           </View>
 
-          <View style={tw`h-1/2`}>
+          <View style={tw`h-3/4`}>
             <Stack.Navigator>
                 <Stack.Screen 
                     name="NavigateCard"
