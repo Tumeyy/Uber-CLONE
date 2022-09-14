@@ -6,16 +6,17 @@ import MapView from 'react-native-maps';
 import { createStackNavigator } from '@react-navigation/stack';
 import NavigateCard from '../components/NavigateCard';
 import RideOptionsCard from '../components/RideOptionsCard';
+import EatsOptionsCard from '../components/EatsOptionsCard';
 
 const MapScreen = () => {
     const Stack = createStackNavigator();
     return (
         <View>
-          <View style={tw`h-1/3`}>
+          <View style={tw`h-1/2`}>
             <Map />
           </View>
 
-          <View style={tw`h-2/3`}>
+          <View style={tw`h-1/2`}>
             <Stack.Navigator>
                 <Stack.Screen 
                     name="NavigateCard"
@@ -27,6 +28,13 @@ const MapScreen = () => {
                 <Stack.Screen 
                     name="RideOptionsCard"
                     component={RideOptionsCard}
+                    options={{
+                        headerShown: false,
+                    }}
+                />
+                <Stack.Screen 
+                    name="EatsOptionsCard"
+                    component={EatsOptionsCard}
                     options={{
                         headerShown: false,
                     }}
